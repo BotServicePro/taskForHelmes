@@ -12,6 +12,9 @@ setup:
 migrate:
 	php artisan migrate
 
+seed:
+	php artisan db:seed SectorSeeder
+
 migrate-reset:
 	php artisan migrate:reset
 
