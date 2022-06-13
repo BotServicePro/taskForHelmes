@@ -48,8 +48,6 @@ class SectorController extends Controller
         return $parent;
     }
 
-
-
     /**
      *
      * @return \Illuminate\Http\Response
@@ -63,8 +61,6 @@ class SectorController extends Controller
         $sessionData['sectors'] = $request->session()->get('sectors')[0] ?? null;
         $sessionData['terms'] = $request->session()->get('terms')[0] ?? null;  
 
-        //dump($sessionData);
-        
         return view('site.index', compact('sessionData', 'sectorsTree'));
     }
 
@@ -93,7 +89,6 @@ class SectorController extends Controller
         $newRecord->fill($data);
         $newRecord->sectorIds = $data['sectors'];
 
-        
         $newRecord->save();
         
         flash('Saved')->success();
