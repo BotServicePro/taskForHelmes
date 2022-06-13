@@ -9,5 +9,6 @@ Ensure that you have configured DB connection on .env file
 4) make migrate
 5) make seed
 6) make start
-7) go to route /show
+7) php artisan key:generate
+8) go to route /show
 ```
